@@ -1,0 +1,42 @@
+@use './__globals.scss' as *;
+@use './__variables.scss' as *;
+
+.footer {
+    padding: 0 $standard-margin $large-margin;
+    background-color: $black;
+    line-height: 2rem;
+    font-size: 1.4rem;
+    color: $white;
+
+    &__heading  {
+        @include section-header;
+    }
+
+    &__icons-container {
+        display: flex;
+        gap: $standard-margin;
+        margin-bottom: $standard-margin;
+    }
+
+        &__icon {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+
+    &__subheading {
+        margin: $large-margin 0 $standard-margin 0;
+    }
+
+    &__copy {
+        margin-bottom: $standard-margin;
+    }
+
+    &__logo {
+        @include logo(4.8rem, 0, $standard-margin, 0);
+    }
+
+    &__copyright {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    } 
+}

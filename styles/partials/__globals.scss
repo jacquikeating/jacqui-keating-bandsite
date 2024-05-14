@@ -1,0 +1,56 @@
+@use './__variables.scss' as *;
+
+
+/* RESET -------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ROOT TYPOGRAPHY ---------------------------------------------- */
+:root {
+    font-size: 10px;
+    font-family: "Avenir Next Regular";
+}
+
+
+/* FONT FACES --------------------------------------------------- */
+@font-face {
+    font-family: "Avenir Next Regular";
+    src: url('../../assets/fonts/AvenirNextLTPro-Regular.otf');
+}
+
+@font-face {
+    font-family: "Avenir Next Demi";
+    src: url('../../assets/fonts/AvenirNextLTPro-Demi.otf');
+}
+
+@font-face {
+    font-family: "Avenir Next Bold";
+    src: url('../../assets/fonts/AvenirNextLTPro-Bold.otf');
+}
+
+
+/* LOGO / WORDMARK ---------------------------------------------- */
+@mixin logo ($margin-top, $margin-right, $margin-bottom, $margin-left) {
+    margin: $margin-top $margin-right $margin-bottom $margin-left;
+    height: 20px;
+    width: 120px;
+
+    font-family: 'Avenir Next Regular';
+    font-size: 2rem;
+
+    &--link {
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+@mixin section-header {
+    padding: $large-margin 0 $standard-margin 0;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 700;
+}
