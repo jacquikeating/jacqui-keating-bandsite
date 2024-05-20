@@ -38,10 +38,8 @@
 /* MIXINS ------------------------------------------------------- */
 @mixin logo ($margin-top, $margin-right, $margin-bottom, $margin-left) {
     margin: $margin-top $margin-right $margin-bottom $margin-left;
-    max-height: 20px;
-    max-width: 120px;
     font-family: 'Avenir Next Regular';
-    font-size: 2rem;
+    font-size: 3.2rem;
 
     &--link {
         text-decoration: none;
@@ -53,7 +51,7 @@
     padding: $headline-padding;
     margin-left: $standard-margin;
     line-height: 3.2rem;
-    font-size: 2.4rem;
+    font-size: 3rem;
     font-weight: 700;
     color: $white;
 
