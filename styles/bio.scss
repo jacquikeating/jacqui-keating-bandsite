@@ -2,6 +2,7 @@
 @use './partials/__footer.scss' as *;
 @use './partials/__header.scss' as *;
 @use './partials/__variables.scss' as *;
+@use './partials/__mediaqueries.scss' as *;
 
 
 /* HERO --------------------------------------------------------- */
@@ -21,17 +22,13 @@
         width: 100%;
         height: 100%;
         opacity: 0.5;
-        background-color: $black;  
+        background-color: $black;
     }
 
     &__heading {
         position: absolute;
         z-index: 2;
-        padding-left: 1.6rem;
-        font-size: 2.4rem;
-        line-height: 3.2rem;
-        color: $white;
-        font-weight: 700;
+        @include page-header;
     }
 }
 
@@ -45,26 +42,60 @@
     &__img {
         width: 100%;
         object-fit: cover;
+
+        @include tablet {
+            display: block;
+            margin: auto;
+            width: 85%;
+        }
     }
 
     &__quote {
+        @include body-copy;
         margin: $standard-margin 0;
-        line-height: 22px;
-        font-size: 1.4rem;
         font-weight: 700;
+
+        &--attr {
+            @include tablet {
+                display: block;
+                margin-top: $standard-margin;
+                font-size: 2rem;
+        }
+    }
+
+        @include tablet {
+            @include subheader;
+            margin: auto;
+            padding: $td-standard-margin 0 $td-standard-margin 0;
+            width: 85%;
+        }
     }
 
     &__subheading {
         margin-bottom: 0.8rem;
-        line-height: 22px;
-        font-size: 1.4rem;
-        font-weight: 600;
+        @include subheader;
+
+        @include tablet {
+            width: 85%;
+            margin: 0 auto;
+        }
     }
 
     &__copy {
         margin-bottom: $standard-margin;
-        font-size: 1.3rem;
-        line-height: 1.8rem;
+        @include body-copy;
+
+        @include tablet {
+            margin: 0 auto $td-standard-margin auto;
+            width: 85%;
+            columns: 2;
+            column-gap: $td-standard-margin;
+        }
+        
+    }
+
+    @include tablet {
+        margin: $td-standard-margin;
     }
 }
 
@@ -80,10 +111,29 @@
         display: flex;
         flex-direction: column;
         gap: $standard-margin;
+        
+        @include tablet {
+            flex-flow: row wrap;
+            gap: $large-margin;
+        }
     }
 
         &__img {
             object-fit: cover;
             width: 100%;
+
+            @include tablet {
+                width: 30%;
+            }
         }
+
+    @include tablet {
+        margin: $td-large-margin;
+        // width: 85%;
+    }
+}
+
+.test p {
+    font-size: 24px;
+    margin-left: 100px;
 }

@@ -1,3 +1,5 @@
+@use './__mediaqueries.scss' as *;
+
 /* VARIABLES ---------------------------------------------------- */
 $main-font: "Avenir Next Regular";
 $demi-font: "Avenir Next Demi";
@@ -15,3 +17,8 @@ $desktop-size: 1280px;
 
 $standard-margin: 1.6rem;
 $large-margin: 2.4rem;
+$headline-padding: $large-margin 0 $standard-margin 0;
+
+$td-standard-margin: 3.6rem;
+$td-large-margin: 4.8rem;
+$td-headline-padding: $td-large-margin 0 $td-standard-margin 0;

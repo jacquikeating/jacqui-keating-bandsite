@@ -1,4 +1,5 @@
 @use './__variables.scss' as *;
+@use './__mediaqueries.scss' as *;
 
 
 /* RESET -------------------------------------------------------- */
@@ -12,7 +13,8 @@
 /* ROOT TYPOGRAPHY ---------------------------------------------- */
 :root {
     font-size: 10px;
-    font-family: "Avenir Next Regular";
+    font-family: "Avenir Next Regular", Arial, sans-serif;
+    font-weight: 400;
 }
 
 
@@ -33,12 +35,11 @@
 }
 
 
-/* LOGO / WORDMARK ---------------------------------------------- */
+/* MIXINS ------------------------------------------------------- */
 @mixin logo ($margin-top, $margin-right, $margin-bottom, $margin-left) {
     margin: $margin-top $margin-right $margin-bottom $margin-left;
-    height: 20px;
-    width: 120px;
-
+    max-height: 20px;
+    max-width: 120px;
     font-family: 'Avenir Next Regular';
     font-size: 2rem;
 
@@ -48,9 +49,77 @@
     }
 }
 
-@mixin section-header {
-    padding: $large-margin 0 $standard-margin 0;
-    font-size: 2.4rem;
+@mixin page-header {
+    padding: $headline-padding;
+    margin-left: $standard-margin;
     line-height: 3.2rem;
+    font-size: 2.4rem;
     font-weight: 700;
+    color: $white;
+
+    @include tablet {
+        padding: $td-headline-padding;
+        margin-left: $td-standard-margin;
+        line-height: 6.8rem;
+        font-size: 6rem;
+    }
+}
+
+@mixin section-header {
+    padding: $headline-padding;
+    line-height: 3.2rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+
+    @include tablet {
+        padding: $td-headline-padding;
+        line-height: 4.4rem;
+        font-size: 3.6rem;
+    }
+}
+
+@mixin subheader {
+    padding: $headline-padding;
+    line-height: 2.2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    @include tablet {
+        padding: $td-headline-padding;
+        line-height: 3.2rem;
+        font-size: 2.4rem;
+    }
+}
+
+@mixin body-copy {
+    line-height: 1.8rem;
+    font-size: 1.3rem;
+
+    @include tablet {
+        line-height: 2.2rem;
+        font-size: 1.4rem;
+    }
+}
+
+@mixin footer-copy {
+    line-height: 1.8rem;
+    font-size: 1.3rem;
+    color: $white;
+
+    @include tablet {
+        line-height: 2rem;
+        font-size: 1.6rem;
+    }
+}
+
+@mixin labels-and-buttons {
+    line-height: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include tablet {
+        line-height: 2rem;
+        font-size: 1.2rem;
+    }
 }
