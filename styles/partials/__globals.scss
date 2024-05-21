@@ -13,8 +13,8 @@
 /* ROOT TYPOGRAPHY ---------------------------------------------- */
 :root {
     font-size: 10px;
-    font-family: "Avenir Next Regular", Arial, sans-serif;
-    font-weight: 400;
+    font-family: "Avenir Next Regular";
+    letter-spacing: 0.025em;
 }
 
 
@@ -35,11 +35,12 @@
 }
 
 
-/* MIXINS ------------------------------------------------------- */
+/* LOGO / WORDMARK ---------------------------------------------- */
 @mixin logo ($margin-top, $margin-right, $margin-bottom, $margin-left) {
     margin: $margin-top $margin-right $margin-bottom $margin-left;
     font-family: 'Avenir Next Regular';
-    font-size: 3.2rem;
+    font-size: 2.3rem;
+    letter-spacing: 0.05em;
 
     &--link {
         text-decoration: none;
@@ -51,7 +52,7 @@
     padding: $headline-padding;
     margin-left: $standard-margin;
     line-height: 3.2rem;
-    font-size: 3rem;
+    font-size: 2.3rem;
     font-weight: 700;
     color: $white;
 
@@ -64,60 +65,8 @@
 }
 
 @mixin section-header {
-    padding: $headline-padding;
+    padding: 0.8rem 0;
     line-height: 3.2rem;
     font-size: 2.4rem;
     font-weight: 700;
-
-    @include tablet {
-        padding: $td-headline-padding;
-        line-height: 4.4rem;
-        font-size: 3.6rem;
-    }
-}
-
-@mixin subheader {
-    padding: $headline-padding;
-    line-height: 2.2rem;
-    font-size: 1.4rem;
-    font-weight: 600;
-
-    @include tablet {
-        padding: $td-headline-padding;
-        line-height: 3.2rem;
-        font-size: 2.4rem;
-    }
-}
-
-@mixin body-copy {
-    line-height: 1.8rem;
-    font-size: 1.3rem;
-
-    @include tablet {
-        line-height: 2.2rem;
-        font-size: 1.4rem;
-    }
-}
-
-@mixin footer-copy {
-    line-height: 1.8rem;
-    font-size: 1.3rem;
-    color: $white;
-
-    @include tablet {
-        line-height: 2rem;
-        font-size: 1.6rem;
-    }
-}
-
-@mixin labels-and-buttons {
-    line-height: 2rem;
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-
-    @include tablet {
-        line-height: 2rem;
-        font-size: 1.2rem;
-    }
 }
