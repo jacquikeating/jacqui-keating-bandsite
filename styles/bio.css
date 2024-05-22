@@ -442,4 +442,84 @@
   .gallery {
     padding: 3.6rem 13.3rem;
   }
+}
+
+/* COMMENTS ----------------------------------------------------- */
+.comments {
+  padding: 0 1.6rem;
+}
+.comments__heading {
+  padding: 0.8rem 0;
+  line-height: 3.2rem;
+  font-size: 2.4rem;
+  font-family: "Avenir Next Demi";
+}
+@media screen and (min-width: 768px) {
+  .comments__heading {
+    padding: 2rem 0 2.7rem 0;
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__heading {
+    padding: 2rem 0 3.9rem 0;
+  }
+}
+.comments .new-comment {
+  display: flex;
+  margin-top: 0.7rem;
+  gap: 1.6rem;
+}
+.comments .new-comment__profile-pic {
+  width: 3.6rem;
+  height: 3.6rem;
+  margin-top: 1.6rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+}
+.comments .new-comment__form {
+  width: 100%;
+}
+.comments .new-comment__label {
+  display: block;
+  margin: 0 0 2.2rem 0;
+  font-size: 0.85rem;
+  font-family: "Avenir Next Regular";
+  text-transform: uppercase;
+  color: #AFAFAF;
+}
+.comments .new-comment__input, .comments .new-comment__textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.6rem;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  padding: 0.8rem;
+  background-color: #FAFAFA;
+  font-family: "Avenir Next Regular";
+  color: #000000;
+}
+.comments .new-comment__textarea {
+  height: 10rem;
+}
+.comments .new-comment__submit {
+  width: 100%;
+  min-width: 150px;
+  height: 4rem;
+  margin-top: -0.4rem;
+  border: none;
+  border-radius: 4px;
+  padding: 1.3rem 3.2rem;
+  background-color: #323232;
+  font-family: "Avenir Next Regular";
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.comments .new-comment__submit:hover {
+  background-color: #000000;
 }/*# sourceMappingURL=bio.css.map */
