@@ -68,5 +68,15 @@
     padding: 0.8rem 0;
     line-height: 3.2rem;
     font-size: 2.4rem;
-    font-weight: 700;
+    font-family: 'Avenir Next Demi';
+
+    @include tablet {
+        padding: 2rem 0 2.7rem 0;
+        font-size: 3.6rem;
+        line-height: 3.6rem;
+    }
+
+    @include desktop {
+        padding: 2rem 0 3.9rem 0;
+    }
 }

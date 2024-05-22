@@ -1,5 +1,6 @@
 @use './__globals.scss' as *;
 @use './__variables.scss' as *;
+@use './__mediaqueries.scss' as *;
 
 .footer {
     padding: $standard-margin;
@@ -40,4 +41,77 @@
         font-size: 1rem;
         margin-bottom: 1.4rem;
     } 
+
+    @include tablet {
+        position: relative;
+        padding: 3.6rem;
+
+        &__top {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+            &__heading {
+                margin: 0.8rem 0 0 0;
+            }
+
+            &__icons-container {
+                gap: 3.2rem;
+                margin-bottom: 0;
+                align-items: flex-start;
+            }
+
+                &__icon {
+                    width: 2.8rem;
+                    height: 2.8rem;
+                }
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+            &__subheading {
+                margin: 1rem 0 2.4rem 0;
+                font-size: 1.3rem;
+            }
+        
+            &__copy {
+                margin-bottom: 2.4rem;
+            }
+
+            &__logo {
+                position: absolute;
+                top: 7.5rem;
+                right: 3.6rem;
+                margin: 0;
+                z-index: 1;
+            }
+
+            &__copyright {
+                font-size: 1.3rem;
+                margin-top: 2.4rem;
+                margin-bottom: 1.4rem;
+            } 
+    }
+
+    @include desktop {
+        padding: 3.6rem 13.3rem;
+
+    
+        &__container {
+            margin-top: -2rem;
+            justify-content: flex-start;
+            gap: 6.8rem;
+        }
+
+        &__logo {
+            position: absolute;
+            top: 6.4rem;
+            right: 13rem;
+            margin: 0;
+            z-index: 1;
+        }
+    }
 }

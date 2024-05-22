@@ -68,4 +68,18 @@
             }
         }
     }
+
+    @include desktop {
+        &__logo {
+            margin: 0 3rem 0 13.3rem;
+        }
+
+        .nav {
+            &__item {
+                padding: 3.3rem 0;
+                margin: 0 3rem;
+                font-size: 1.4rem;
+            }
+        }
+    }
 }
