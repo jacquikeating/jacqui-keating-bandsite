@@ -21,7 +21,6 @@
             width: 100%;
             list-style: none;
             text-align: center;
-
         }
 
             &__item {
@@ -31,11 +30,6 @@
                 font-size: 1.2rem;
                 letter-spacing: 0.05em;
 
-
-                &__link {
-                    color: $mercury;
-                }
-                 
                 &:active,
                 &:hover,
                 &:focus {
@@ -47,7 +41,18 @@
                         font-weight: bold;
                     }
                 }
-            }     
+            } 
+            
+                &__link {
+                    color: $mercury;
+                    text-decoration: none;
+
+                    &:visited {
+                        color: $mercury;
+                    }
+                }
+             
+            
     }
 
     @include tablet {
