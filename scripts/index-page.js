@@ -28,11 +28,15 @@ let commentsArr = [
 
 function renderComment(comment){
     const newComment = document.createElement("div");
+    newComment.classList.add("comment");
     newComment.innerHTML = `
-        <p>${comment.user}</p>
-        <p>${comment.date}</p>
-        <p>${comment.comment}</p>
-    `
+        <img class="comment__profile-pic" src="#" />
+        <div class="comment__body">
+            <p class="comment__user">${comment.user}</p>
+            <p class="comment__date">${comment.date}</p>
+            <p class="comment__comment">${comment.comment}</p>
+        </div>
+    `;
     commentsContainer.appendChild(newComment);
 }
 
@@ -41,4 +45,5 @@ function renderAllComments() {
         renderComment(commentsArr[i]);
     }
 }
+
 renderAllComments();
