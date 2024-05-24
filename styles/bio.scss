@@ -287,7 +287,7 @@
                     width: 100%;
                     min-width: 150px;
                     height: 4rem;
-                    margin-top: -0.4rem;
+                    margin: -0.4rem 0;
                     border: none;
                     border-radius: 4px;
                     padding: 1.3rem 3.2rem;
@@ -302,4 +302,60 @@
                     }
                 }
     }
+
+    &__container {
+        margin-bottom: $standard-margin;
+
+        .comment {
+            width: 100%;
+            position: relative;
+            display: flex;
+            gap: $standard-margin;
+            padding: 1.8rem 0;
+            border-bottom: 1px solid $mercury;
+            font-size: 1.2rem;
+
+            &:first-of-type {
+                border-top: 1px solid $mercury;
+            }
+
+        &__profile-pic {
+            width: 3.6rem;
+            height: 3.6rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        &__user {
+            font-family: 'Avenir Next Demi';
+        }
+
+        &__date {
+            position: absolute;
+            top: $standard-margin;
+            right: 0;
+            color: $silver;
+        }
+
+        &__comment {
+            margin-top: 1rem;
+            line-height: 1.5;
+        }
+
+        }
+    }
+
+        
 }
+
+/* 
+
+newComment.innerHTML = `
+        <img class="comment__profile-pic" src="#" />
+        <div class="comment__body">
+            <p class="comment__user">${comment.user}</p>
+            <p class="comment__date">${comment.date}</p>
+            <p class="comment__comment">${comment.comment}</p>
+        </div>
+        
+*/

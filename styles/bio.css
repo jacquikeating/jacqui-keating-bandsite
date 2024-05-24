@@ -510,7 +510,7 @@
   width: 100%;
   min-width: 150px;
   height: 4rem;
-  margin-top: -0.4rem;
+  margin: -0.4rem 0;
   border: none;
   border-radius: 4px;
   padding: 1.3rem 3.2rem;
@@ -522,4 +522,51 @@
 }
 .comments .new-comment__submit:hover {
   background-color: #000000;
-}/*# sourceMappingURL=bio.css.map */
+}
+.comments__container {
+  margin-bottom: 1.6rem;
+}
+.comments__container .comment {
+  width: 100%;
+  position: relative;
+  display: flex;
+  gap: 1.6rem;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid #E1E1E1;
+  font-size: 1.2rem;
+}
+.comments__container .comment:first-of-type {
+  border-top: 1px solid #E1E1E1;
+}
+.comments__container .comment__profile-pic {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.comments__container .comment__user {
+  font-family: "Avenir Next Demi";
+}
+.comments__container .comment__date {
+  position: absolute;
+  top: 1.6rem;
+  right: 0;
+  color: #AFAFAF;
+}
+.comments__container .comment__comment {
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+/* 
+
+newComment.innerHTML = `
+        <img class="comment__profile-pic" src="#" />
+        <div class="comment__body">
+            <p class="comment__user">${comment.user}</p>
+            <p class="comment__date">${comment.date}</p>
+            <p class="comment__comment">${comment.comment}</p>
+        </div>
+
+*//*# sourceMappingURL=bio.css.map */

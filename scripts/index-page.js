@@ -26,19 +26,38 @@ let commentsArr = [
     }
 ]
 
-function renderComment(comment){
+
+// FUNCTIONS -------------------------------------------------------
+function renderComment(comment) {
     const newComment = document.createElement("div");
     newComment.classList.add("comment");
-    newComment.innerHTML = `
-        <img class="comment__profile-pic" src="#" />
-        <div class="comment__body">
-            <p class="comment__user">${comment.user}</p>
-            <p class="comment__date">${comment.date}</p>
-            <p class="comment__comment">${comment.comment}</p>
-        </div>
-    `;
     commentsContainer.appendChild(newComment);
+
+    const profilePic = document.createElement("img");
+    profilePic.classList.add("comment__profile-pic");
+    profilePic.src = "/assets/images/avatar-placeholder.png";
+    newComment.appendChild(profilePic);
+
+    const commentBody = document.createElement("div");
+    commentBody.classList.add("comment__body");
+    newComment.appendChild(commentBody);
+
+    const commentUser = document.createElement("p");
+    commentUser.classList.add("comment__user");
+    commentUser.textContent = comment.user;
+    commentBody.appendChild(commentUser);
+
+    const commentDate = document.createElement("p");
+    commentDate.classList.add("comment__date");
+    commentDate.textContent = comment.date;
+    commentBody.appendChild(commentDate);
+
+    const commentComment = document.createElement("p");
+    commentComment.classList.add("comment__comment");
+    commentComment.textContent = comment.comment;
+    commentBody.appendChild(commentComment);
 }
+
 
 function renderAllComments() {
     for (let i = 0; i < commentsArr.length; i++) {
@@ -47,3 +66,4 @@ function renderAllComments() {
 }
 
 renderAllComments();
+// renderAllComments2();
