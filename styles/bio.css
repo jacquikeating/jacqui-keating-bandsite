@@ -560,6 +560,11 @@
     margin: 1.2rem 6.4rem 0 6rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .comments .new-comment {
+    margin: 1.2rem 26rem 0 26rem;
+  }
+}
 .comments__container {
   margin-bottom: 1.6rem;
 }
@@ -617,9 +622,19 @@
     font-size: 1.4rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .comments__container .comment {
+    padding-bottom: 2.6rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .comments__container {
     margin: 1.2rem 6.4rem 0.8rem 6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__container {
+    margin: 1.2rem 26rem 0.8rem 26rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -627,15 +642,8 @@
     padding: 3rem;
   }
 }
-
-/* 
-
-newComment.innerHTML = `
-        <img class="comment__profile-pic" src="#" />
-        <div class="comment__body">
-            <p class="comment__user">${comment.user}</p>
-            <p class="comment__date">${comment.date}</p>
-            <p class="comment__comment">${comment.comment}</p>
-        </div>
-
-*//*# sourceMappingURL=bio.css.map */
+@media screen and (min-width: 1280px) {
+  .comments {
+    padding: 3rem 13rem;
+  }
+}/*# sourceMappingURL=bio.css.map */

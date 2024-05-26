@@ -57,7 +57,6 @@ function renderComment(comment) {
     commentBody.appendChild(commentComment);
 }
 
-
 function renderAllComments() {
     commentsContainer.innerHTML = '';
     for (let i = 0; i < commentsArr.length; i++) {
@@ -79,14 +78,14 @@ form.addEventListener("submit", function(e) {
     // 1. Prevent page refresh
     e.preventDefault();
 
-    // 2. Store input values in an object and call createTimestamp() to automatically generate a date
+    // 2. Store input values in an object and call createTimestamp() to automatically generate the date
     const newCommentData = {
         user: nameInput.value,
         date: createTimestamp(),
         comment: commentInput.value
     }
 
-    // 3. Add newCommentData to beginning of commentsArr
+    // 3. Add the new comment object at the beginning of the comments array
     commentsArr.unshift(newCommentData);
 
     // 4. Clear input fields

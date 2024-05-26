@@ -330,6 +330,10 @@
                 @include tablet {
                     margin: 1.2rem 6.4rem 0 6rem;            
                 }
+
+                @include desktop {
+                    margin: 1.2rem 26rem 0 26rem;
+                }
     }
 
     &__container {
@@ -388,27 +392,26 @@
                 padding: 3rem 0;
                 font-size: 1.4rem;
             }
+
+            @include desktop {
+                padding-bottom:2.6rem;
+            }
         }
 
         @include tablet {
             margin: 1.2rem 6.4rem 0.8rem 6rem;            
+        }
+
+        @include desktop {
+            margin: 1.2rem 26rem 0.8rem 26rem;            
         }
     }
 
     @include tablet {
         padding: 3rem;
     }
-        
+
+    @include desktop {
+        padding: 3rem 13rem;
+    }
 }
-
-/* 
-
-newComment.innerHTML = `
-        <img class="comment__profile-pic" src="#" />
-        <div class="comment__body">
-            <p class="comment__user">${comment.user}</p>
-            <p class="comment__date">${comment.date}</p>
-            <p class="comment__comment">${comment.comment}</p>
-        </div>
-        
-*/
