@@ -481,6 +481,13 @@
   -o-object-position: left;
      object-position: left;
 }
+@media screen and (min-width: 768px) {
+  .comments .new-comment__profile-pic {
+    width: 5rem;
+    height: 5rem;
+    margin-top: 1rem;
+  }
+}
 .comments .new-comment__form {
   width: 100%;
 }
@@ -491,6 +498,11 @@
   font-family: "Avenir Next Regular";
   text-transform: uppercase;
   color: #AFAFAF;
+}
+@media screen and (min-width: 768px) {
+  .comments .new-comment__label {
+    font-size: 1.2rem;
+  }
 }
 .comments .new-comment__input, .comments .new-comment__textarea {
   display: block;
@@ -503,10 +515,16 @@
   font-family: "Avenir Next Regular";
   color: #000000;
 }
+@media screen and (min-width: 768px) {
+  .comments .new-comment__input, .comments .new-comment__textarea {
+    padding: 1.6rem;
+  }
+}
 .comments .new-comment__textarea {
   height: 10rem;
 }
 .comments .new-comment__submit {
+  display: block;
   width: 100%;
   min-width: 150px;
   height: 4rem;
@@ -522,6 +540,19 @@
 }
 .comments .new-comment__submit:hover {
   background-color: #000000;
+}
+@media screen and (min-width: 768px) {
+  .comments .new-comment__submit {
+    width: -moz-max-content;
+    width: max-content;
+    padding: 1.3rem 4rem;
+    margin: 2.4rem 0 1.2rem auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .comments .new-comment {
+    margin: 1.2rem 3rem 0 6rem;
+  }
 }
 .comments__container {
   margin-bottom: 1.6rem;
@@ -545,6 +576,12 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (min-width: 768px) {
+  .comments__container .comment__profile-pic {
+    width: 5rem;
+    height: 5rem;
+  }
+}
 .comments__container .comment__user {
   font-family: "Avenir Next Demi";
 }
@@ -554,9 +591,35 @@
   right: 0;
   color: #AFAFAF;
 }
+@media screen and (min-width: 768px) {
+  .comments__container .comment__date {
+    top: 3rem;
+  }
+}
 .comments__container .comment__comment {
   margin-top: 1rem;
   line-height: 1.5;
+}
+@media screen and (min-width: 768px) {
+  .comments__container .comment__comment {
+    margin-top: 0.8rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .comments__container .comment {
+    padding: 3rem 0;
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .comments__container {
+    margin: 1.2rem 3rem auto 6rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .comments {
+    padding: 3rem;
+  }
 }
 
 /* 

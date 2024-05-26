@@ -251,6 +251,12 @@
             border-radius: 50%;
             object-fit: cover;
             object-position: left;
+
+            @include tablet {
+                width: 5rem;
+                height: 5rem;
+                margin-top: 1rem;
+            }
         }
 
         &__form {
@@ -264,6 +270,10 @@
                 font-family: 'Avenir Next Regular';
                 text-transform: uppercase;
                 color: $silver;
+                    
+                @include tablet {
+                    font-size: 1.2rem;
+                }
             }
 
                 &__input,
@@ -277,6 +287,10 @@
                     background-color: $alabaster;
                     font-family: 'Avenir Next Regular';
                     color: $darkblack;
+
+                    @include tablet {
+                        padding: 1.6rem;
+                    }
                 }
 
                 &__textarea {
@@ -284,6 +298,7 @@
                 }
 
                 &__submit {
+                    display: block;
                     width: 100%;
                     min-width: 150px;
                     height: 4rem;
@@ -300,6 +315,16 @@
                     &:hover {
                         background-color: $darkblack;
                     }
+
+                    @include tablet {
+                        width: max-content;
+                        padding: 1.3rem 4rem;
+                        margin: 2.4rem 0 1.2rem auto;
+                    }
+                }
+
+                @include tablet {
+                    margin: 1.2rem 3rem 0 6rem;            
                 }
     }
 
@@ -319,32 +344,56 @@
                 border-top: 1px solid $mercury;
             }
 
-        &__profile-pic {
-            width: 3.6rem;
-            height: 3.6rem;
-            border-radius: 50%;
-            object-fit: cover;
+            &__profile-pic {
+                width: 3.6rem;
+                height: 3.6rem;
+                border-radius: 50%;
+                object-fit: cover;
+
+                @include tablet {
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+
+            &__user {
+                font-family: 'Avenir Next Demi';
+            }
+
+            &__date {
+                position: absolute;
+                top: $standard-margin;
+                right: 0;
+                color: $silver;
+
+                @include tablet {
+                    top: 3rem;
+                }
+            }
+
+            &__comment {
+                margin-top: 1rem;
+                line-height: 1.5;
+
+                @include tablet {
+                    margin-top: 0.8rem;
+                }
+            }
+
+            @include tablet {
+                padding: 3rem 0;
+                font-size: 1.4rem;
+            }
         }
 
-        &__user {
-            font-family: 'Avenir Next Demi';
-        }
-
-        &__date {
-            position: absolute;
-            top: $standard-margin;
-            right: 0;
-            color: $silver;
-        }
-
-        &__comment {
-            margin-top: 1rem;
-            line-height: 1.5;
-        }
-
+        @include tablet {
+            margin: 1.2rem 3rem auto 6rem;            
         }
     }
 
+    @include tablet {
+        padding: 3rem;
+    }
         
 }
 

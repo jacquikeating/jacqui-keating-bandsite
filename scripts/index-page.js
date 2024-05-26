@@ -66,4 +66,3 @@ function renderAllComments() {
 }
 
 renderAllComments();
-// renderAllComments2();
