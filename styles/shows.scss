@@ -1,0 +1,62 @@
+@use './partials/__globals.scss' as *;
+@use './partials/__variables.scss' as *;
+@use './partials/__mediaqueries.scss' as *;
+@use './partials/__header.scss' as *;
+@use './partials/__hero.scss' as *;
+@use './partials/__footer.scss' as *;
+
+
+.hero {
+
+    &__text {
+        position: absolute;
+        z-index: 2;
+        padding-left: 1.6rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: $white;
+    }
+
+
+}
+
+.shows {
+
+    margin-bottom: 1.6rem;
+
+    &__heading {
+        @include section-header;
+        margin: 2.4rem $standard-margin 0 $standard-margin;
+    }
+
+
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $mercury;
+    margin-top: 0.1rem;
+
+
+    &__subheading {
+       @include label;
+       margin: 1.6rem $standard-margin 0.8rem $standard-margin;
+       font-size: 1rem;
+    }
+
+    &__body-copy {
+        margin: 0 $standard-margin;
+        font-size: 1.2rem;
+
+        &--bold {
+            font-weight: bold;
+        }
+    }
+
+    &__buy-tickets-btn {
+        @include button;
+        width: calc(100% - 3.2rem);
+        margin: 1.9rem $standard-margin $standard-margin $standard-margin;
+    }
+}

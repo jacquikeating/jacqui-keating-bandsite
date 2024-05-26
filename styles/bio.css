@@ -27,6 +27,136 @@
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
 }
 /* LOGO / WORDMARK ---------------------------------------------- */
+/* TYPOGRAPHY --------------------------------------------------- */
+/* COMPONENTS --------------------------------------------------- */
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  color: #FFFFFF;
+}
+.header__logo {
+  margin: 1.6rem auto 0.8rem auto;
+  font-family: "Avenir Next Regular";
+  font-size: 2.3rem;
+  letter-spacing: 0.05em;
+}
+.header__logo--link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.header .nav__list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+}
+.header .nav__item {
+  width: 100%;
+  border-bottom: 3px solid transparent;
+  padding-bottom: 0.8rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+}
+.header .nav__item:active, .header .nav__item:hover, .header .nav__item:focus {
+  border-bottom: 3px solid white;
+  cursor: pointer;
+}
+.header .nav__item:active .nav__link, .header .nav__item:hover .nav__link, .header .nav__item:focus .nav__link {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.header .nav__link {
+  color: #E1E1E1;
+  text-decoration: none;
+}
+.header .nav__link:visited {
+  color: #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .header__logo {
+    margin: 1.6rem 3rem;
+    color: pink;
+  }
+  .header .nav__item {
+    padding: 2.6rem 0;
+    margin: 0 3rem;
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__logo {
+    margin: 0 3rem 0 13.3rem;
+  }
+  .header .nav__item {
+    padding: 3.3rem 0;
+    margin: 0 3rem;
+    font-size: 1.4rem;
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.hero__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 23vh;
+}
+@media screen and (min-width: 768px) {
+  .hero__img {
+    height: 57vh;
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__img {
+    height: 77.7vh;
+    -o-object-position: top;
+       object-position: top;
+  }
+}
+.hero__overlay {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: #323232;
+}
+.hero__heading {
+  position: absolute;
+  z-index: 2;
+  padding-left: 1.6rem;
+  font-size: 2.3rem;
+  line-height: 3.2rem;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .hero__heading {
+    padding-left: 3.6rem;
+    font-size: 6rem;
+    font-family: "Avenir Next Demi";
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__heading {
+    padding-left: 13.3rem;
+    margin-top: -1rem;
+  }
+}
+
 .footer {
   padding: 1.6rem;
   background-color: #323232;
@@ -147,131 +277,6 @@
     right: 13rem;
     margin: 0;
     z-index: 1;
-  }
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  background-color: #323232;
-  color: #FFFFFF;
-}
-.header__logo {
-  margin: 1.6rem auto 0.8rem auto;
-  font-family: "Avenir Next Regular";
-  font-size: 2.3rem;
-  letter-spacing: 0.05em;
-}
-.header__logo--link {
-  text-decoration: none;
-  color: #FFFFFF;
-}
-.header .nav__list {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  list-style: none;
-  text-align: center;
-}
-.header .nav__item {
-  width: 100%;
-  border-bottom: 3px solid transparent;
-  padding-bottom: 0.8rem;
-  font-size: 1.2rem;
-  letter-spacing: 0.05em;
-}
-.header .nav__item:active, .header .nav__item:hover, .header .nav__item:focus {
-  border-bottom: 3px solid white;
-  cursor: pointer;
-}
-.header .nav__item:active .nav__link, .header .nav__item:hover .nav__link, .header .nav__item:focus .nav__link {
-  color: #FFFFFF;
-  font-weight: bold;
-}
-.header .nav__link {
-  color: #E1E1E1;
-  text-decoration: none;
-}
-.header .nav__link:visited {
-  color: #E1E1E1;
-}
-@media screen and (min-width: 768px) {
-  .header {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .header__logo {
-    margin: 1.6rem 3rem;
-    color: pink;
-  }
-  .header .nav__item {
-    padding: 2.6rem 0;
-    margin: 0 3rem;
-    font-size: 1.4rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .header__logo {
-    margin: 0 3rem 0 13.3rem;
-  }
-  .header .nav__item {
-    padding: 3.3rem 0;
-    margin: 0 3rem;
-    font-size: 1.4rem;
-  }
-}
-
-/* HERO --------------------------------------------------------- */
-.hero {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.hero__img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 23vh;
-}
-.hero__overlay {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  background-color: #323232;
-}
-.hero__heading {
-  position: absolute;
-  z-index: 2;
-  padding-left: 1.6rem;
-  font-size: 2.3rem;
-  line-height: 3.2rem;
-  color: #FFFFFF;
-  font-weight: 700;
-}
-@media screen and (min-width: 768px) {
-  .hero__img {
-    height: 57vh;
-    -o-object-position: bottom;
-       object-position: bottom;
-  }
-  .hero__heading {
-    padding-left: 3.6rem;
-    font-size: 6rem;
-    font-family: "Avenir Next Demi";
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero__img {
-    height: 77.7vh;
-    -o-object-position: top;
-       object-position: top;
-  }
-  .hero__heading {
-    padding-left: 13.3rem;
-    margin-top: -1rem;
   }
 }
 
