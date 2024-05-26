@@ -513,7 +513,13 @@
   padding: 0.8rem;
   background-color: #FAFAFA;
   font-family: "Avenir Next Regular";
-  color: #000000;
+  color: #323232;
+}
+.comments .new-comment__input::-moz-placeholder, .comments .new-comment__textarea::-moz-placeholder {
+  color: #323232;
+}
+.comments .new-comment__input::placeholder, .comments .new-comment__textarea::placeholder {
+  color: #323232;
 }
 @media screen and (min-width: 768px) {
   .comments .new-comment__input, .comments .new-comment__textarea {

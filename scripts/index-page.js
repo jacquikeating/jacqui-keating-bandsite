@@ -3,7 +3,6 @@ const form = document.querySelector(".new-comment__form")
 const userProfilePic = document.querySelector(".new-comment__profile-pic")
 const nameInput = document.getElementById("name-input")
 const commentInput = document.getElementById("comment-textarea")
-const formSubmitBtn = document.getElementById("comment-submit")
 const commentsContainer = document.querySelector(".comments__container")
 
 
@@ -60,9 +59,44 @@ function renderComment(comment) {
 
 
 function renderAllComments() {
+    commentsContainer.innerHTML = '';
     for (let i = 0; i < commentsArr.length; i++) {
         renderComment(commentsArr[i]);
     }
 }
 
+function createTimestamp() {
+    const d = new Date();
+    const month = d.getMonth() + 1;
+    const date = d.getDate();
+    const year = d.getFullYear();
+    return `${month}/${date}/${year}`;
+}
+
+
+// EVENT LISTENERS -------------------------------------------------
+form.addEventListener("submit", function(e) {
+    // 1. Prevent page refresh
+    e.preventDefault();
+
+    // 2. Store input values in an object and call createTimestamp() to automatically generate a date
+    const newCommentData = {
+        user: nameInput.value,
+        date: createTimestamp(),
+        comment: commentInput.value
+    }
+
+    // 3. Add newCommentData to beginning of commentsArr
+    commentsArr.unshift(newCommentData);
+
+    // 4. Clear input fields
+    nameInput.value = '';
+    commentInput.value = '';
+
+    // 5. Render updated comments list
+    renderAllComments();
+})
+
+
+// FUNCTION(S) TO CALL ON LOAD -------------------------------------
 renderAllComments();

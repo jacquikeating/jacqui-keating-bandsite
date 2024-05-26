@@ -286,7 +286,11 @@
                     padding: 0.8rem;
                     background-color: $alabaster;
                     font-family: 'Avenir Next Regular';
-                    color: $darkblack;
+                    color: $black;
+
+                    &::placeholder {
+                        color: $black;
+                    }
 
                     @include tablet {
                         padding: 1.6rem;
