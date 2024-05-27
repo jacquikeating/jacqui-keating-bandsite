@@ -28,32 +28,19 @@
         <div class="hero__overlay"></div>
         <p class="hero__text">Beautiful Beasts Album</p>
         <h1 class="hero__heading">Stripes of Yellow x <br> For The Stings</h1>
+        <div class="player">
+            <iframe class="player__iframe" 
+                scrolling="no" frameborder="no" allow="autoplay" 
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535872399&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
+            </iframe>
+        </div>         
     </section>
 
     <main class="main">
-        
         <section class="shows">
             <h2 class="shows__heading">Shows</h2>
-            <article class="show">
-                <p class="show__subheading">Date</p>
-                <p class="show__body-copy show__body-copy--bold">Mon Sept 09 2024</p>
-                <p class="show__subheading">Venue</p>
-                <p class="show__body-copy">Ronald Lane</p>
-                <p class="show__subheading">Location</p>
-                <p class="show__body-copy">San Francisco, CA</p>
-                <button class="show__buy-tickets-btn">Buy Tickets</button>
-            </article>
-            <article class="show">
-                <p class="show__subheading">Date</p>
-                <p class="show__body-copy show__body-copy--bold">Mon Sept 09 2024</p>
-                <p class="show__subheading">Venue</p>
-                <p class="show__body-copy">Ronald Lane</p>
-                <p class="show__subheading">Location</p>
-                <p class="show__body-copy">San Francisco, CA</p>
-                <button class="show__buy-tickets-btn">Buy Tickets</button>
-            </article>
+            <div class="shows__container"></div>
         </section>
-
     </main>
 
     <footer class="footer">
@@ -116,6 +103,6 @@
         <p class="footer__copyright">Copyright The Bees Knees © 2023 All Rights Reserved</p>
     </footer>
 
-    <script src="/scripts/index-page.js"></script>
+    <script src="/scripts/build-shows-page.js"></script>
 </body>
 </html>
