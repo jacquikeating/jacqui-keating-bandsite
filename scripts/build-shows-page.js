@@ -47,7 +47,7 @@ function renderShow(show) {
     showEl.appendChild(showDateSubheading);
 
     const showDateText = document.createElement("p");
-    showDateText.classList.add("show__body-copy");
+    showDateText.classList.add("show__body-copy", "show__body-copy--bold");
     showDateText.textContent = show.date;
     showEl.appendChild(showDateText);
 
@@ -79,7 +79,6 @@ function renderShow(show) {
 }
 
 function renderAllShows() {
-    showsContainer.innerHTML = '';
     for (let i = 0; i < showsArr.length; i++) {
         renderShow(showsArr[i]);
     }

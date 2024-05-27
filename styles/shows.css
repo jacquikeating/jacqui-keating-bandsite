@@ -82,7 +82,6 @@
   }
   .header__logo {
     margin: 1.6rem 3rem;
-    color: pink;
   }
   .header .nav__item {
     padding: 2.6rem 0;
@@ -287,6 +286,18 @@
 }
 .hero__img {
   height: 35.5vh;
+  -o-object-position: center;
+     object-position: center;
+}
+@media screen and (min-width: 768px) {
+  .hero__img {
+    height: 64vh;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__img {
+    height: 83vh;
+  }
 }
 .hero__text {
   position: absolute;
@@ -298,9 +309,34 @@
   color: #FFFFFF;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .hero__text {
+    top: 6.3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 3.6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__text {
+    padding-left: 13.3rem;
+    top: 20rem;
+  }
+}
 .hero__heading {
   width: 100%;
   top: 7.2rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__heading {
+    line-height: 1.1;
+    top: 10.2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__heading {
+    top: 26rem;
+  }
 }
 
 .player {
@@ -316,6 +352,12 @@
   height: 98px;
   z-index: 3;
 }
+@media screen and (min-width: 768px) {
+  .player__iframe {
+    height: 140px;
+    width: 60%;
+  }
+}
 .player__text {
   font-size: 1rem;
   color: #ccc;
@@ -330,6 +372,19 @@
 .player__link {
   text-decoration: none;
   color: #ccc;
+}
+@media screen and (min-width: 768px) {
+  .player {
+    padding: 3.6rem;
+    top: 24rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .player {
+    top: 20.4rem;
+    left: 70rem;
+    width: 58%;
+  }
 }
 
 .shows {
@@ -354,6 +409,58 @@
     padding: 2rem 0 3.9rem 0;
   }
 }
+@media screen and (min-width: 768px) {
+  .shows__heading {
+    margin: 2.4rem 1.6rem 1.6rem 3.6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__heading {
+    margin: 3rem 1.6rem 1.6rem 13.3rem;
+  }
+}
+.shows__column-headings-row {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .shows__column-headings-row {
+    display: block;
+    margin-left: 3.6rem;
+    width: 100%;
+  }
+}
+.shows__column-heading {
+  display: block;
+  margin: 0 0 2.2rem 0;
+  font-size: 0.85rem;
+  font-family: "Avenir Next Regular";
+  text-transform: uppercase;
+  color: #AFAFAF;
+  display: inline-block;
+  min-width: 24.2%;
+  margin-bottom: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .shows__column-heading {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__column-heading {
+    margin-top: 6.7rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shows {
+    margin-bottom: 3.6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows {
+    display: flex;
+    gap: 9.5rem;
+  }
+}
 
 .show {
   display: flex;
@@ -376,12 +483,24 @@
     font-size: 1.2rem;
   }
 }
+@media screen and (min-width: 768px) {
+  .show__subheading {
+    display: none;
+  }
+}
 .show__body-copy {
   margin: 0 1.6rem;
   font-size: 1.2rem;
 }
 .show__body-copy--bold {
   font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .show__body-copy {
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    width: 20%;
+  }
 }
 .show__buy-tickets-btn {
   display: block;
@@ -409,5 +528,29 @@
     width: max-content;
     padding: 1.3rem 4rem;
     margin: 2.4rem 0 1.2rem auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .show__buy-tickets-btn {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .show__buy-tickets-btn {
+    margin-right: 3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .show {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1.6rem;
+    padding: 1.6rem 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .show {
+    width: 62vw;
   }
 }/*# sourceMappingURL=shows.css.map */

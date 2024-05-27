@@ -13,6 +13,15 @@
 
     &__img {
         height: 35.5vh;
+        object-position: center;
+
+        @include tablet {
+            height: 64vh;
+        }
+
+        @include desktop {
+            height: 83vh;
+        }
     }
 
     &__text {
@@ -24,11 +33,32 @@
         line-height: 2rem;
         color: $white;
         width: 100%;
+
+        @include tablet {
+            top: 6.3rem;
+            font-size: 2rem;
+            font-weight: bold;
+            padding-left: 3.6rem;
+        }
+
+        @include desktop {
+            padding-left: 13.3rem;
+            top: 20rem;
+        }
     }
 
     &__heading {
         width: 100%;
         top: 7.2rem;
+
+        @include tablet {
+            line-height: 1.1;
+            top: 10.2rem;
+        }
+
+        @include desktop {
+            top: 26rem;
+        }
     }
 }
 
@@ -39,10 +69,16 @@
     position: absolute;
     top: 14.5rem;
     margin-bottom: 3.2rem;
+
     &__iframe{
         width: 100%;
         height: 98px;
         z-index: 3;
+
+        @include tablet {
+            height: 140px;
+            width: 60%;
+        }
      }
 
 
@@ -62,18 +98,66 @@
         text-decoration: none;
         color: #ccc;
     }
+
+    @include tablet {
+        padding: 3.6rem;
+        top: 24rem;
+    }
+
+    @include desktop {
+        top: 20.4rem;
+        left: 70rem;
+        width: 58%;
+        
+    }
 }
 
 .shows {
-
     margin-bottom: 1.6rem;
 
     &__heading {
         @include section-header;
         margin: 2.4rem $standard-margin 0 $standard-margin;
+
+        @include tablet {
+            margin: 2.4rem $standard-margin 1.6rem 3.6rem;
+        }
+
+        @include desktop {
+            margin: 3rem $standard-margin 1.6rem 13.3rem;
+        }
     }
 
 
+    &__column-headings-row {
+        display: none;
+
+        @include tablet {
+            display: block;
+            margin-left: 3.6rem;
+            width: 100%;
+        }
+    }
+
+        &__column-heading {
+            @include label;
+            display: inline-block;
+            min-width: 24.2%;
+            margin-bottom: 0.8rem;
+
+            @include desktop {
+                margin-top: 6.7rem;
+            }
+        }
+
+        @include tablet {
+            margin-bottom: 3.6rem;
+        }
+
+        @include desktop {
+            display: flex;
+            gap: 9.5rem;
+        }
 }
 
 .show {
@@ -82,11 +166,14 @@
     border-bottom: 1px solid $mercury;
     margin-top: 0.1rem;
 
-
     &__subheading {
        @include label;
        margin: 1.6rem $standard-margin 0.8rem $standard-margin;
        font-size: 1rem;
+
+       @include tablet {
+            display: none;
+       }
     }
 
     &__body-copy {
@@ -96,11 +183,37 @@
         &--bold {
             font-weight: bold;
         }
+
+        @include tablet {
+            margin-left: 2rem;
+            font-size: 1.3rem;
+            width: 20%;
+        }
     }
 
     &__buy-tickets-btn {
         @include button;
         width: calc(100% - 3.2rem);
         margin: 1.9rem $standard-margin $standard-margin $standard-margin;
+
+        @include tablet {
+            margin: 0;
+        }
+
+        @include desktop {
+            margin-right: 3rem;
+        }
+    }
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 1.6rem;
+        padding: 1.6rem 0;
+    }
+
+    @include desktop {
+        width: 62vw;
     }
 }
