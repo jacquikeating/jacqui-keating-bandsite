@@ -1,0 +1,219 @@
+@use './partials/__globals.scss' as *;
+@use './partials/__variables.scss' as *;
+@use './partials/__mediaqueries.scss' as *;
+@use './partials/__header.scss' as *;
+@use './partials/__hero.scss' as *;
+@use './partials/__footer.scss' as *;
+
+
+.hero {
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+
+    &__img {
+        height: 35.5vh;
+        object-position: center;
+
+        @include tablet {
+            height: 64vh;
+        }
+
+        @include desktop {
+            height: 83vh;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        top: 3.8rem;
+        z-index: 2;
+        padding-left: 1.6rem;
+        font-size: 1.3rem;
+        line-height: 2rem;
+        color: $white;
+        width: 100%;
+
+        @include tablet {
+            top: 6.3rem;
+            font-size: 2rem;
+            font-weight: bold;
+            padding-left: 3.6rem;
+        }
+
+        @include desktop {
+            padding-left: 13.3rem;
+            top: 20rem;
+        }
+    }
+
+    &__heading {
+        width: 100%;
+        top: 7.2rem;
+
+        @include tablet {
+            line-height: 1.1;
+            top: 10.2rem;
+        }
+
+        @include desktop {
+            top: 26rem;
+        }
+    }
+}
+
+.player {
+    width: 100%;
+    padding: 1.6rem;    
+    z-index: 1;
+    position: absolute;
+    top: 14.5rem;
+    margin-bottom: 3.2rem;
+
+    &__iframe{
+        width: 100%;
+        height: 98px;
+        z-index: 3;
+
+        @include tablet {
+            height: 140px;
+            width: 60%;
+        }
+     }
+
+
+    &__text {
+        font-size: 1rem;
+        color: #ccc;
+        line-break: anywhere;
+        word-break: normal;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-family: 'Interstate', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Garuda', 'Verdana', 'Tahoma', sans-serif;
+        font-weight: 100;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #ccc;
+    }
+
+    @include tablet {
+        padding: 3.6rem;
+        top: 24rem;
+    }
+
+    @include desktop {
+        top: 20.4rem;
+        left: 70rem;
+        width: 58%;
+        
+    }
+}
+
+.shows {
+    margin-bottom: 1.6rem;
+
+    &__heading {
+        @include section-header;
+        margin: 2.4rem $standard-margin 0 $standard-margin;
+
+        @include tablet {
+            margin: 2.4rem $standard-margin 1.6rem 3.6rem;
+        }
+
+        @include desktop {
+            margin: 3rem $standard-margin 1.6rem 13.3rem;
+        }
+    }
+
+
+    &__column-headings-row {
+        display: none;
+
+        @include tablet {
+            display: block;
+            margin-left: 3.6rem;
+            width: 100%;
+        }
+    }
+
+        &__column-heading {
+            @include label;
+            display: inline-block;
+            min-width: 24.2%;
+            margin-bottom: 0.8rem;
+
+            @include desktop {
+                margin-top: 6.7rem;
+            }
+        }
+
+        @include tablet {
+            margin-bottom: 3.6rem;
+        }
+
+        @include desktop {
+            display: flex;
+            gap: 9.5rem;
+        }
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $mercury;
+    margin-top: 0.1rem;
+
+    &__subheading {
+       @include label;
+       margin: 1.6rem $standard-margin 0.8rem $standard-margin;
+       font-size: 1rem;
+
+       @include tablet {
+            display: none;
+       }
+    }
+
+    &__body-copy {
+        margin: 0 $standard-margin;
+        font-size: 1.2rem;
+
+        &--bold {
+            font-weight: bold;
+        }
+
+        @include tablet {
+            margin-left: 2rem;
+            font-size: 1.3rem;
+            width: 20%;
+        }
+    }
+
+    &__buy-tickets-btn {
+        @include button;
+        width: calc(100% - 3.2rem);
+        margin: 1.9rem $standard-margin $standard-margin $standard-margin;
+
+        @include tablet {
+            margin: 0;
+        }
+
+        @include desktop {
+            margin-right: 3rem;
+        }
+    }
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 1.6rem;
+        padding: 1.6rem 0;
+    }
+
+    @include desktop {
+        width: 62vw;
+    }
+}
