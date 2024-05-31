@@ -1,11 +1,13 @@
+// GLOBAL VARIABLES ------------------------------------------------
 const apiKey = "/?api_key=9050e407-74c4-4190-a5ec-d72a97f6cfa5";
 let commentsArray = [];
 let showsArray = [];
-let testComment = {
-    name: "John Doe",
-    comment: "Great band"
-};
+// let testComment = {
+//     name: "John Doe",
+//     comment: "Great band"
+// };
 
+// API CLASS -------------------------------------------------------
 class BandSiteApi {
     constructor(apiKey) {
         this.baseUrl = "https://unit-2-project-api-25c1595833b2.herokuapp.com";
@@ -51,10 +53,8 @@ class BandSiteApi {
         }
     }
 
-}
+};
 
-const api = new BandSiteApi(apiKey)
+const api = new BandSiteApi(apiKey);
 
-api.getComments()
-api.postComment(testComment)
-api.getShows()
+export default api;
