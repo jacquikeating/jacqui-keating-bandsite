@@ -1,15 +1,12 @@
 // IMPORT ----------------------------------------------------------
-import api from './band-site-api.js'
+import api from './band-site-api.js';
 
 
 // ELEMENT REFERENCES ----------------------------------------------
-const form = document.querySelector(".new-comment__form")
-const nameInput = document.getElementById("name-input")
-const commentInput = document.getElementById("comment-textarea")
-const commentsContainer = document.querySelector(".comments__container")
-
-
-// GLOBAL VARIABLES ------------------------------------------------
+const form = document.querySelector(".new-comment__form");
+const nameInput = document.getElementById("name-input");
+const commentInput = document.getElementById("comment-textarea");
+const commentsContainer = document.querySelector(".comments__container");
 
 
 // FUNCTIONS -------------------------------------------------------
@@ -52,15 +49,6 @@ async function renderAllComments() {
         renderComment(commentsArr[i]);
     }  
 }
-
-// function createTimestamp() {
-//     const d = new Date();
-//     const month = d.getMonth() + 1;
-//     const date = d.getDate();
-//     const year = d.getFullYear();
-//     return `${month}/${date}/${year}`;
-// }
-
 
 // EVENT LISTENERS -------------------------------------------------
 form.addEventListener("submit", async function(e) {

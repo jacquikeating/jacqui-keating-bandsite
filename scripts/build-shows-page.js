@@ -1,39 +1,10 @@
-// ELEMENT REFERENCES ----------------------------------------------
-const showsContainer = document.querySelector(".shows__container")
+// IMPORT ----------------------------------------------------------
+import api from './band-site-api.js';
 
-// GLOBAL VARIABLES ------------------------------------------------
-let showsArr = [
-    {
-        date: 'Mon Sept 09 2024',
-        venue: 'Ronald Lane',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Tue Sept 17 2024',
-        venue: 'Pier 3 East',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Sat Oct 12 2024',
-        venue: 'View Lounge',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Sat Nov 16 2024',
-        venue: 'Hyatt Agency',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Fri Nov 29 2024',
-        venue: 'Moscow Center',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Wed Dec 18 2024',
-        venue: 'Press Club',
-        location: 'San Francisco, CA'
-    }
-]
+
+// ELEMENT REFERENCES ----------------------------------------------
+const showsContainer = document.querySelector(".shows__container");
+
 
 // FUNCTIONS -------------------------------------------------------
 function renderShow(show) {
@@ -48,7 +19,8 @@ function renderShow(show) {
 
     const showDateText = document.createElement("p");
     showDateText.classList.add("show__body-copy", "show__body-copy--bold");
-    showDateText.textContent = show.date;
+    const timestampToDate = new Date(show.date).toLocaleDateString('en-US');
+    showDateText.textContent = timestampToDate;
     showEl.appendChild(showDateText);
 
     const showVenueSubheading = document.createElement("p");
@@ -58,7 +30,7 @@ function renderShow(show) {
 
     const showVenueText = document.createElement("p");
     showVenueText.classList.add("show__body-copy");
-    showVenueText.textContent = show.venue;
+    showVenueText.textContent = show.place;
     showEl.appendChild(showVenueText);
 
     const showLocationSubheading = document.createElement("p");
@@ -75,10 +47,10 @@ function renderShow(show) {
     buyTicketsBtn.classList.add("show__buy-tickets-btn");
     buyTicketsBtn.textContent = 'Buy Tickets';
     showEl.appendChild(buyTicketsBtn);
-
 }
 
-function renderAllShows() {
+async function renderAllShows() {
+    let showsArr = await api.getShows();
     for (let i = 0; i < showsArr.length; i++) {
         renderShow(showsArr[i]);
     }
