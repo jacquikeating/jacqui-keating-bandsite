@@ -34,7 +34,8 @@ function renderComment(comment) {
 
     const commentDate = document.createElement("p");
     commentDate.classList.add("comment__date");
-    commentDate.textContent = comment.timestamp;
+    const timestampToDate = new Date(comment.timestamp).toLocaleDateString('en-US');
+    commentDate.textContent = timestampToDate;
     commentBody.appendChild(commentDate);
 
     const commentComment = document.createElement("p");
@@ -46,6 +47,7 @@ function renderComment(comment) {
 async function renderAllComments() {
     commentsContainer.innerHTML = '';
     let commentsArr = await api.getComments();
+    commentsArr.reverse();
     for (let i = 0; i < commentsArr.length; i++) {
         renderComment(commentsArr[i]);
     }  

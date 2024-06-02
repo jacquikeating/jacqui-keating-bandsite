@@ -33,10 +33,26 @@ class BandSiteApi {
         try {
             const response = await axios.get(this.baseUrl + "/comments" + this.apiKey);
             commentsArray = response.data;
-            commentsArray.reverse();
             console.log(commentsArray);
+            commentsArray.sort((a, b) => {
+                if (a.timestamp > b.timestamp) {
+                    return -1;
+                }
+            });
+            commentsArray.reverse();
             return commentsArray;
         } catch(error) {
+            console.error(error);
+        }
+    }
+
+    async deleteComment(e) {
+        console.log(e.target)
+        try {
+            const response = await axios.delete(this.baseUrl + `/comments/${comment.id}` + this.apiKey);
+            console.log(response.data);
+        }
+        catch (error) {
             console.error(error);
         }
     }
