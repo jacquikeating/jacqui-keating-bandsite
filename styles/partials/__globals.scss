@@ -13,8 +13,9 @@
 /* ROOT TYPOGRAPHY ---------------------------------------------- */
 :root {
     font-size: 10px;
-    font-family: "Avenir Next Regular";
+    font-family: "Avenir Next Regular", "Arial", "Helvetica", sans-serif;
     letter-spacing: 0.025em;
+    color: $black;
 }
 
 
@@ -71,6 +72,7 @@
     line-height: 3.2rem;
     font-size: 2.4rem;
     font-family: 'Avenir Next Demi';
+    color: $black;
 
     @include tablet {
         padding: 2rem 0 2.7rem 0;
@@ -102,7 +104,7 @@
 @mixin button {
     display: block;
     width: 100%;
-    min-width: 150px;
+    min-width: 1.5rem;
     height: 4rem;
     margin: -0.4rem 0;
     border: none;

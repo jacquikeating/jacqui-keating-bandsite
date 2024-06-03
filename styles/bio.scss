@@ -6,9 +6,20 @@
 @use './partials/__footer.scss' as *;
 
 
+/* ACTIVE PAGE LINK --------------------------------------------- */
+.nav__item:nth-of-type(1) {
+    border-bottom: 3px solid white;
+
+    .nav__link {
+        color: $white;
+    }
+}
+
+
 /* ABOUT -------------------------------------------------------- */
 .about {
     padding: 1.6rem;
+    background-color: $white;
 
     &__heading {
         @include section-header;
@@ -22,13 +33,13 @@
 
     &__quote {
         margin: $standard-margin 0;
-        line-height: 22px;
+        line-height: 2.2rem;
         font-size: 1.4rem;
         font-weight: 700;
     }
 
     &__subheading {
-        line-height: 22px;
+        line-height: 2.2rem;
         font-size: 1.4rem;
         font-weight: 600;
     }

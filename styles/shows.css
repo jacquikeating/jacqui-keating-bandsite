@@ -9,8 +9,9 @@
 /* ROOT TYPOGRAPHY ---------------------------------------------- */
 :root {
   font-size: 10px;
-  font-family: "Avenir Next Regular";
+  font-family: "Avenir Next Regular", "Arial", "Helvetica", sans-serif;
   letter-spacing: 0.025em;
+  color: #323232;
 }
 
 /* FONT FACES --------------------------------------------------- */
@@ -168,6 +169,8 @@
   line-height: 3.2rem;
   font-size: 2.4rem;
   font-family: "Avenir Next Demi";
+  color: #323232;
+  color: #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .footer__heading {
@@ -277,6 +280,14 @@
     margin: 0;
     z-index: 1;
   }
+}
+
+/* ACTIVE PAGE LINK --------------------------------------------- */
+.nav__item:nth-of-type(2) {
+  border-bottom: 3px solid white;
+}
+.nav__item:nth-of-type(2) .nav__link {
+  color: #FFFFFF;
 }
 
 .hero {
@@ -395,6 +406,7 @@
   line-height: 3.2rem;
   font-size: 2.4rem;
   font-family: "Avenir Next Demi";
+  color: #323232;
   margin: 2.4rem 1.6rem 0 1.6rem;
 }
 @media screen and (min-width: 768px) {
@@ -505,7 +517,7 @@
 .show__buy-tickets-btn {
   display: block;
   width: 100%;
-  min-width: 150px;
+  min-width: 1.5rem;
   height: 4rem;
   margin: -0.4rem 0;
   border: none;

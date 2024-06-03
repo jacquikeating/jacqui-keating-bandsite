@@ -9,8 +9,9 @@
 /* ROOT TYPOGRAPHY ---------------------------------------------- */
 :root {
   font-size: 10px;
-  font-family: "Avenir Next Regular";
+  font-family: "Avenir Next Regular", "Arial", "Helvetica", sans-serif;
   letter-spacing: 0.025em;
+  color: #323232;
 }
 
 /* FONT FACES --------------------------------------------------- */
@@ -168,6 +169,8 @@
   line-height: 3.2rem;
   font-size: 2.4rem;
   font-family: "Avenir Next Demi";
+  color: #323232;
+  color: #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .footer__heading {
@@ -279,15 +282,25 @@
   }
 }
 
+/* ACTIVE PAGE LINK --------------------------------------------- */
+.nav__item:nth-of-type(1) {
+  border-bottom: 3px solid white;
+}
+.nav__item:nth-of-type(1) .nav__link {
+  color: #FFFFFF;
+}
+
 /* ABOUT -------------------------------------------------------- */
 .about {
   padding: 1.6rem;
+  background-color: #FFFFFF;
 }
 .about__heading {
   padding: 0.8rem 0;
   line-height: 3.2rem;
   font-size: 2.4rem;
   font-family: "Avenir Next Demi";
+  color: #323232;
 }
 @media screen and (min-width: 768px) {
   .about__heading {
@@ -309,12 +322,12 @@
 }
 .about__quote {
   margin: 1.6rem 0;
-  line-height: 22px;
+  line-height: 2.2rem;
   font-size: 1.4rem;
   font-weight: 700;
 }
 .about__subheading {
-  line-height: 22px;
+  line-height: 2.2rem;
   font-size: 1.4rem;
   font-weight: 600;
 }
@@ -399,6 +412,7 @@
   line-height: 3.2rem;
   font-size: 2.4rem;
   font-family: "Avenir Next Demi";
+  color: #323232;
 }
 @media screen and (min-width: 768px) {
   .gallery__heading {
@@ -457,6 +471,7 @@
   line-height: 3.2rem;
   font-size: 2.4rem;
   font-family: "Avenir Next Demi";
+  color: #323232;
 }
 @media screen and (min-width: 768px) {
   .comments__heading {
@@ -536,7 +551,7 @@
 .comments .new-comment__submit {
   display: block;
   width: 100%;
-  min-width: 150px;
+  min-width: 1.5rem;
   height: 4rem;
   margin: -0.4rem 0;
   border: none;

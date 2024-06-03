@@ -6,6 +6,16 @@
 @use './partials/__footer.scss' as *;
 
 
+/* ACTIVE PAGE LINK --------------------------------------------- */
+.nav__item:nth-of-type(2) {
+    border-bottom: 3px solid white;
+
+    .nav__link {
+        color: $white;
+    }
+}
+
+
 .hero {
     flex-direction: column;
     justify-content: center;
