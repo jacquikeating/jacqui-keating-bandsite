@@ -195,6 +195,7 @@
     .new-comment {
         display: flex;
         margin-top: 0.7rem;
+        margin-bottom: 2rem;
         gap: $standard-margin;
 
         &__profile-pic {
@@ -247,6 +248,7 @@
 
                 &__submit {
                     @include button;
+                    width: 100%;
                 }
 
                 @include tablet {

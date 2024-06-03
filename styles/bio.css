@@ -488,6 +488,7 @@
 .comments .new-comment {
   display: flex;
   margin-top: 0.7rem;
+  margin-bottom: 2rem;
   gap: 1.6rem;
 }
 .comments .new-comment__profile-pic {
@@ -550,18 +551,16 @@
 }
 .comments .new-comment__submit {
   display: block;
-  width: 100%;
-  min-width: 1.5rem;
-  height: 4rem;
   margin: -0.4rem 0;
   border: none;
   border-radius: 4px;
-  padding: 1.3rem 3.2rem;
+  padding: 1.2rem 3.2rem;
   background-color: #323232;
   font-family: "Avenir Next Regular";
   font-size: 1.4rem;
   text-transform: uppercase;
   color: #FFFFFF;
+  width: 100%;
 }
 .comments .new-comment__submit:hover {
   background-color: #000000;
