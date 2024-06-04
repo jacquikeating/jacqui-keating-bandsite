@@ -190,8 +190,8 @@
   margin-bottom: 1.6rem;
 }
 .footer__icon {
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 10vw;
+  height: 10vw;
 }
 .footer__subheading {
   margin: 2.4rem 0 1.6rem 0;
@@ -237,8 +237,8 @@
     align-items: flex-start;
   }
   .footer__icon {
-    width: 2.8rem;
-    height: 2.8rem;
+    width: 3.8vw;
+    height: 3.8vw;
   }
   .footer__container {
     display: flex;
@@ -279,6 +279,10 @@
     right: 13rem;
     margin: 0;
     z-index: 1;
+  }
+  .footer__icon {
+    width: 2.2vw;
+    height: 2.2vw;
   }
 }
 
@@ -492,8 +496,8 @@
   gap: 1.6rem;
 }
 .comments .new-comment__profile-pic {
-  width: 3.6rem;
-  height: 3.6rem;
+  width: 11.25vw;
+  height: 11.25vw;
   margin-top: 1.6rem;
   border-radius: 50%;
   -o-object-fit: cover;
@@ -503,9 +507,15 @@
 }
 @media screen and (min-width: 768px) {
   .comments .new-comment__profile-pic {
-    width: 5rem;
-    height: 5rem;
+    width: 6.5vw;
+    height: 6.5vw;
     margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments .new-comment__profile-pic {
+    width: 3.75vw;
+    height: 3.75vw;
   }
 }
 .comments .new-comment__form {
@@ -547,7 +557,7 @@
   }
 }
 .comments .new-comment__textarea {
-  height: 10rem;
+  height: 12vh;
 }
 .comments .new-comment__submit {
   display: block;
@@ -599,16 +609,22 @@
   border-top: 1px solid #E1E1E1;
 }
 .comments__container .comment__profile-pic {
-  width: 3.6rem;
-  height: 3.6rem;
+  width: 11.25vw;
+  height: 11.25vw;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media screen and (min-width: 768px) {
   .comments__container .comment__profile-pic {
-    width: 5rem;
-    height: 5rem;
+    width: 6.5vw;
+    height: 6.5vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__container .comment__profile-pic {
+    width: 3.75vw;
+    height: 3.75vw;
   }
 }
 .comments__container .comment__user {

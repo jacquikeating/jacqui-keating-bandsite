@@ -199,17 +199,22 @@
         gap: $standard-margin;
 
         &__profile-pic {
-            width: 3.6rem;
-            height: 3.6rem;
+            width: 11.25vw;
+            height: 11.25vw;
             margin-top: 1.6rem;
             border-radius: 50%;
             object-fit: cover;
             object-position: left;
 
             @include tablet {
-                width: 5rem;
-                height: 5rem;
+                width: 6.5vw;
+                height: 6.5vw;
                 margin-top: 1rem;
+            }
+
+            @include desktop {
+                width: 3.75vw;
+                height: 3.75vw;
             }
         }
 
@@ -243,7 +248,7 @@
                 }
 
                 &__textarea {
-                    height: 10rem;
+                    height: 12vh;
                 }
 
                 &__submit {
@@ -258,7 +263,7 @@
                 @include desktop {
                     margin: 1.2rem 26rem 0 26rem;
                 }
-    }
+    } 
 
     &__container {
         margin-bottom: $standard-margin;
@@ -277,14 +282,19 @@
             }
 
             &__profile-pic {
-                width: 3.6rem;
-                height: 3.6rem;
+                width: 11.25vw;
+                height: 11.25vw;
                 border-radius: 50%;
                 object-fit: cover;
 
                 @include tablet {
-                    width: 5rem;
-                    height: 5rem;
+                    width: 6.5vw;
+                    height: 6.5vw;
+                }
+
+                @include desktop {
+                    width: 3.75vw;
+                    height: 3.75vw;
                 }
             }
 

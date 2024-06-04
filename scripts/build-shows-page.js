@@ -19,7 +19,8 @@ function renderShow(show) {
 
     const showDateText = document.createElement("p");
     showDateText.classList.add("show__body-copy", "show__body-copy--bold");
-    const timestampToDate = new Date(show.date).toLocaleDateString('en-US');
+    const timestampToDate = new Date(show.date).toDateString();
+
     showDateText.textContent = timestampToDate;
     showEl.appendChild(showDateText);
 
@@ -47,6 +48,14 @@ function renderShow(show) {
     buyTicketsBtn.classList.add("show__buy-tickets-btn");
     buyTicketsBtn.textContent = 'Buy Tickets';
     showEl.appendChild(buyTicketsBtn);
+
+    showEl.addEventListener("click", function() {
+        const allShows = document.querySelectorAll(".show");
+        allShows.forEach((show) => {
+            show.classList.remove("show--selected");
+        })
+        showEl.classList.add("show--selected");
+    })
 }
 
 async function renderAllShows() {

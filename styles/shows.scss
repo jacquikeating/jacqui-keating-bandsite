@@ -36,7 +36,7 @@
         object-position: center;
 
         @include tablet {
-            height: 52.5vh;
+            height: 56vh;
         }
 
         @include desktop {
@@ -104,6 +104,7 @@
 
         @include desktop {
             height: 100%;
+            width: 100%;
         }
      }
 
@@ -132,7 +133,7 @@
     @include desktop {
         top: 20.4rem;
         left: 70rem;
-        width: 58%;
+        width: 38%;
     }
 }
 
@@ -140,17 +141,26 @@
 /* SHOWS -------------------------------------------------------- */
 .shows {
     margin-bottom: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include desktop {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 
     &__heading {
         @include section-header;
         margin: 2.4rem $standard-margin 0 $standard-margin;
 
         @include tablet {
-            margin: 2.4rem $standard-margin 1.6rem 3.6rem;
+            margin: 0 $standard-margin 0 3.6rem;
         }
 
         @include desktop {
-            margin: 3rem $standard-margin 1.6rem 13.3rem;
+            margin: 0 2rem 1.6rem 13.3rem;
         }
     }
 
@@ -158,20 +168,38 @@
         display: none;
 
         @include tablet {
-            display: block;
-            margin-left: 3.6rem;
-            width: 100%;
+            display: flex;
+            width: calc(100% - 3.2rem);
+            justify-content: space-between;
+            margin: 1.6rem 3.6rem 1.2rem 3.6rem;
         }
     }
 
         &__column-heading {
             @include label;
-            display: inline-block;
-            min-width: 24.2%;
             margin-bottom: 0.8rem;
 
+            @include tablet {
+                width: 15%;
+
+                &--space {
+                    width: 25%;
+                }
+            }
+
             @include desktop {
-                margin-top: 6.7rem;
+                padding-top: 2rem;
+                width: 15%;
+
+                &:first-of-type {
+                    width: 25%;
+                }
+            
+                &--space {
+                    display: block;
+                    width: 25%;
+                    margin-right: 6.2rem;
+                }
             }
         }
 
@@ -183,6 +211,10 @@
             display: flex;
             gap: 9.5rem;
         }
+
+    &__container {
+        width: 100%;
+    }
 }
 
 
@@ -191,7 +223,7 @@
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid $mercury;
-    margin-top: 0.1rem;
+    align-items: space-between;
 
     &__subheading {
        @include label;
@@ -208,13 +240,20 @@
         font-size: 1.2rem;
 
         &--bold {
-            font-weight: bold;
-        }
+            font-weight: bold; 
+     }
 
         @include tablet {
             margin-left: 2rem;
             font-size: 1.3rem;
-            width: 20%;
+            width: 15%;
+        }
+
+        @include desktop {
+
+            &--bold {
+                width: 25%;
+            }
         }
     }
 
@@ -224,11 +263,12 @@
         margin: 1.9rem $standard-margin $standard-margin $standard-margin;
 
         @include tablet {
-            margin: 0;
+            margin: 0.6rem $standard-margin 0.4rem;
         }
 
         @include desktop {
-            margin-right: 3rem;
+            margin-right: 2.4rem;
+            padding: 1.15rem 3.2rem;
         }
     }
 
@@ -237,10 +277,24 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 1.6rem;
-        padding: 1.6rem 0;
+        padding: 1rem 0;
     }
 
     @include desktop {
-        width: 62vw;
+        width: 63vw;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $alabaster;
+    }
+
+    &:active,
+    &--selected {
+        background-color: $mercury!important;
     }
 }
+
+// * {
+//     border: 1px solid red;
+// }
